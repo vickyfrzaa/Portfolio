@@ -332,3 +332,54 @@ a {
 #contact .border-light {
   border-color: #2d343f !important;
 }
+
+.footer-icon{
+  
+}
+
+/* GALLERY */
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.gallery-section {
+  display: flex;
+  margin: 10px auto;
+  max-width: 600px;
+  position: relative;
+}
+
+@media (min-width: 600px) {
+  .gallery-section {
+    padding-top: 250px;
+  }
+}
+
+.gallery-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.gallery-thumb {
+  padding-top: 6px;
+  margin: 5px;
+  display: block;
+}
+
+.gallery-selector {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.gallery-selector:checked + .gallery-img {
+  opacity: 1;
+}
+
+.gallery-selector:checked ~ .gallery-thumb > img {
+  box-shadow: 0 0 0 3px #cfd6e1;
+}
